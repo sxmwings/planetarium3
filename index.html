@@ -21,7 +21,6 @@
   --glass: rgba(255,255,255,0.03);
 }
 
-/* Reset & layout */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -33,7 +32,6 @@ html, body {
   background: linear-gradient(180deg, #06070a 0%, var(--bg) 100%);
   color: #fff;
   font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
-  line-height: 1.6;
 }
 
 .container {
@@ -67,27 +65,16 @@ html, body {
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-  text-shadow: 0 0 30px rgba(255, 159, 10, 0.3);
 }
 
-/* Cards - Style amélioré */
+/* Cards */
 .card {
   background: linear-gradient(135deg, rgba(17, 22, 34, 0.9), rgba(20, 26, 40, 0.8));
   border-radius: 20px;
   padding: 24px;
   border: 1px solid rgba(255, 159, 10, 0.15);
-  box-shadow: 
-    0 8px 32px rgba(0, 0, 0, 0.4),
-    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
   backdrop-filter: blur(20px);
-  transition: all 0.3s ease;
-}
-
-.card:hover {
-  border-color: rgba(255, 159, 10, 0.3);
-  box-shadow: 
-    0 12px 40px rgba(0, 0, 0, 0.6),
-    inset 0 1px 0 rgba(255, 255, 255, 0.15);
 }
 
 /* Layout */
@@ -107,7 +94,7 @@ html, body {
 .left { flex: 1; }
 .right { width: 400px; }
 
-/* Buttons - Style amélioré */
+/* Buttons */
 .btn {
   background: linear-gradient(135deg, rgba(40, 44, 52, 0.8), rgba(30, 34, 42, 0.9));
   border: 1px solid rgba(255, 159, 10, 0.2);
@@ -116,56 +103,32 @@ html, body {
   border-radius: 16px;
   cursor: pointer;
   font-weight: 600;
-  font-size: 14px;
   transition: all 0.3s ease;
   backdrop-filter: blur(10px);
-  position: relative;
-  overflow: hidden;
-}
-
-.btn::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
-  transition: left 0.5s;
-}
-
-.btn:hover::before {
-  left: 100%;
 }
 
 .btn.ios {
   padding: 16px 24px;
   border-radius: 18px;
   font-weight: 700;
-  font-size: 15px;
 }
 
 .btn.ios.primary {
   background: linear-gradient(135deg, var(--accent), var(--accent-2));
   color: #0b0f17;
   border: none;
-  box-shadow: 
-    0 6px 20px rgba(255, 159, 10, 0.3),
-    0 0 0 1px rgba(255, 159, 10, 0.2);
+  box-shadow: 0 6px 20px rgba(255, 159, 10, 0.3);
 }
 
 .btn.ios.primary:hover {
-  transform: translateY(-3px);
-  box-shadow: 
-    0 10px 30px rgba(255, 159, 10, 0.4),
-    0 0 0 1px rgba(255, 159, 10, 0.3);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(255, 159, 10, 0.4);
 }
 
 .btn.ios.danger {
   background: linear-gradient(135deg, #ff5a5a, #ff3b30);
   color: #111;
   border: none;
-  box-shadow: 0 6px 20px rgba(255, 59, 48, 0.3);
 }
 
 /* Session list */
@@ -183,36 +146,14 @@ html, body {
   color: #071021;
   font-weight: 800;
   cursor: pointer;
-  box-shadow: 
-    0 8px 24px rgba(255, 159, 10, 0.2),
-    inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 24px rgba(255, 159, 10, 0.2);
   text-align: left;
   transition: all 0.3s ease;
-  position: relative;
-  overflow: hidden;
-}
-
-.session-btn::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), transparent);
-  opacity: 0;
-  transition: opacity 0.3s;
-}
-
-.session-btn:hover::after {
-  opacity: 1;
 }
 
 .session-btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 
-    0 12px 32px rgba(255, 159, 10, 0.3),
-    inset 0 1px 0 rgba(255, 255, 255, 0.4);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 32px rgba(255, 159, 10, 0.3);
 }
 
 /* Exercises */
@@ -229,12 +170,6 @@ html, body {
   border: 1px solid rgba(255, 255, 255, 0.08);
   background: linear-gradient(180deg, var(--card), var(--card-2));
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-  transition: all 0.3s ease;
-}
-
-.exercise-card:hover {
-  border-color: rgba(255, 159, 10, 0.3);
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
 }
 
 .exercise-header {
@@ -285,9 +220,7 @@ html, body {
   align-items: center;
   gap: 16px;
   z-index: 1000;
-  box-shadow: 
-    0 12px 40px rgba(0, 0, 0, 0.6),
-    0 0 0 1px rgba(255, 159, 10, 0.1);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.6);
   backdrop-filter: blur(20px);
 }
 
@@ -315,11 +248,6 @@ html, body {
   font-size: 12px;
   color: var(--muted);
   border: 1px solid rgba(255, 255, 255, 0.05);
-  transition: all 0.3s ease;
-}
-
-.heat-cell:hover {
-  transform: scale(1.05);
 }
 
 .heat-cell.c-low { background: linear-gradient(135deg, #332a1a, #705d3c); }
@@ -336,7 +264,6 @@ html, body {
   color: #fff;
   font-size: 14px;
   transition: all 0.3s ease;
-  backdrop-filter: blur(10px);
 }
 
 .set-input:focus {
@@ -345,7 +272,7 @@ html, body {
   box-shadow: 0 0 0 2px rgba(255, 159, 10, 0.2);
 }
 
-/* Modal overlay */
+/* Modal */
 .modal-overlay {
   position: fixed;
   top: 0;
@@ -366,9 +293,7 @@ html, body {
   border-radius: 24px;
   padding: 30px;
   border: 1px solid rgba(255, 159, 10, 0.2);
-  box-shadow: 
-    0 20px 60px rgba(0, 0, 0, 0.5),
-    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(30px);
   max-width: 500px;
   width: 100%;
@@ -405,17 +330,6 @@ html, body {
   }
 }
 
-/* Animations */
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-.fade-in {
-  animation: fadeIn 0.5s ease;
-}
-
-/* Technique banner */
 .technique-banner {
   background: linear-gradient(135deg, rgba(255, 159, 10, 0.1), rgba(255, 120, 0, 0.05));
   border-radius: 14px;
@@ -425,14 +339,11 @@ html, body {
   font-weight: 700;
   margin-bottom: 16px;
   text-align: center;
-  backdrop-filter: blur(10px);
 }
 
-/* Small helpers */
 .small {
   font-size: 14px;
   color: var(--muted);
-  opacity: 0.8;
 }
 
 .footer {
@@ -440,7 +351,6 @@ html, body {
   margin-top: 40px;
   padding: 20px;
   color: var(--muted);
-  opacity: 0.6;
 }
 </style>
 </head>
@@ -492,8 +402,8 @@ html, body {
         <div class="small" id="quickMsg" style="margin-bottom: 16px">Prêt.</div>
         <div style="display: flex; flex-wrap: wrap; gap: 12px">
           <button id="openStats" class="btn ios">📊 Statistiques</button>
-          <button id="exportCSV" class="btn ios">💾 Export</button>
-          <button id="resetApp" class="btn ios danger">⚠️ Reset</button>
+          <button id="exportCSV" class="btn ios">💾 Export CSV</button>
+          <button id="resetApp" class="btn ios danger">⚠️ Reset App</button>
         </div>
       </div>
 
@@ -609,7 +519,7 @@ function sanitizeId(name) {
 // ========== MODAL SYSTEM ==========
 function openModal(html) {
   const overlay = document.createElement('div');
-  overlay.className = 'modal-overlay fade-in';
+  overlay.className = 'modal-overlay';
   overlay.innerHTML = `
     <div class="modal-content">
       ${html}
@@ -643,7 +553,7 @@ function renderProgramList() {
   Object.values(state.program).forEach(s => {
     const totalSets = s.exercises.reduce((a, b) => a + b.sets, 0);
     const btn = document.createElement('button');
-    btn.className = 'session-btn fade-in';
+    btn.className = 'session-btn';
     btn.innerHTML = `
       <div style="font-weight: 800; font-size: 16px">${s.title}</div>
       <div class="small">${s.exercises.length} ex • ${totalSets} séries</div>
@@ -683,7 +593,7 @@ function renderHeatmap() {
     else cls = 'c-low';
     
     const div = document.createElement('div');
-    div.className = `heat-cell ${cls} fade-in`;
+    div.className = `heat-cell ${cls}`;
     div.textContent = `${day} • ${Math.round(v / 1000)}k`;
     el.appendChild(div);
   });
@@ -704,7 +614,7 @@ function openSession(key) {
 
   // Session header
   const sessionHeader = document.createElement('div');
-  sessionHeader.className = 'card fade-in';
+  sessionHeader.className = 'card';
   sessionHeader.style.marginBottom = '16px';
   sessionHeader.innerHTML = `
     <div style="display: flex; justify-content: space-between; align-items: center">
@@ -721,7 +631,7 @@ function openSession(key) {
   arr.forEach((ex, idx) => {
     const exId = sanitizeId(ex.name);
     const card = document.createElement('div');
-    card.className = 'exercise-card fade-in';
+    card.className = 'exercise-card';
     card.style.marginBottom = '12px';
 
     const header = document.createElement('div');
@@ -797,6 +707,7 @@ function renderExerciseDetails(ex) {
     <div style="display: flex; gap: 12px; margin-top: 16px">
       <button class="btn ios primary" onclick="savePerf('${encodeURIComponent(ex.name)}')">💾 Enregistrer</button>
       <button class="btn ios" onclick="openModifyWeight('${encodeURIComponent(ex.name)}')">✏️ Poids</button>
+      <button class="btn ios" onclick="startRestCountdown(${ex.rest}, '${ex.name}')">⏱️ Repos ${ex.rest}s</button>
       <button class="btn ios danger" onclick="removeExerciseFromSession('${encodeURIComponent(ex.name)}')">🗑️ Retirer</button>
     </div>
   `;
@@ -1009,52 +920,7 @@ function openDayExerciseManager() {
   showQuick('Gestion exercices ouverte', '#ffb347');
 }
 
-// ========== EVENT LISTENERS ==========
-document.getElementById('viewToggle').addEventListener('click', () => {
-  exerciseView = !exerciseView;
-  document.getElementById('progList').style.display = exerciseView ? 'none' : 'flex';
-  document.getElementById('exerciseArea').style.display = exerciseView ? 'block' : 'none';
-  document.getElementById('viewToggle').textContent = exerciseView ? '⬅️ Retour Séances' : '🌀 Vue Exercices';
-});
-
-document.getElementById('openStats').addEventListener('click', () => {
-  openModal(`
-    <h3 style="font-weight: 800; color: var(--accent); margin-bottom: 20px">📊 Statistiques • Semaine ${state.week}</h3>
-    <div style="display: grid; grid-template-columns: 1fr; gap: 20px">
-      <canvas id="chartVolumePro" style="width: 100%; height: 200px"></canvas>
-      <canvas id="chartMusclePro" style="width: 100%; height: 200px"></canvas>
-    </div>
-  `);
-  
-  setTimeout(() => {
-    try {
-      renderCharts();
-    } catch (e) {
-      console.warn('Charts error:', e);
-    }
-  }, 100);
-});
-
-document.getElementById('skipTimer').addEventListener('click', () => stopRest());
-
-// Week navigation
-document.getElementById('prevWeek').addEventListener('click', () => {
-  if (state.week > 1) {
-    state.week--;
-    saveState();
-    renderAll();
-    showQuick(`Semaine ${state.week}`, '#ffb347');
-  }
-});
-
-document.getElementById('nextWeek').addEventListener('click', () => {
-  state.week++;
-  saveState();
-  renderAll();
-  showQuick(`Semaine ${state.week}`, '#ffb347');
-});
-
-// ========== CHARTS ==========
+// ========== STATISTIQUES ==========
 function renderCharts() {
   // Volume per session
   const sessions = Object.values(state.program);
@@ -1114,6 +980,81 @@ function renderCharts() {
     }
   });
 }
+
+// ========== EVENT LISTENERS ==========
+document.getElementById('viewToggle').addEventListener('click', () => {
+  exerciseView = !exerciseView;
+  document.getElementById('progList').style.display = exerciseView ? 'none' : 'flex';
+  document.getElementById('exerciseArea').style.display = exerciseView ? 'block' : 'none';
+  document.getElementById('viewToggle').textContent = exerciseView ? '⬅️ Retour Séances' : '🌀 Vue Exercices';
+});
+
+document.getElementById('openStats').addEventListener('click', () => {
+  openModal(`
+    <h3 style="font-weight: 800; color: var(--accent); margin-bottom: 20px">📊 Statistiques • Semaine ${state.week}</h3>
+    <div style="display: grid; grid-template-columns: 1fr; gap: 20px">
+      <canvas id="chartVolumePro" style="width: 100%; height: 200px"></canvas>
+      <canvas id="chartMusclePro" style="width: 100%; height: 200px"></canvas>
+    </div>
+  `);
+  
+  setTimeout(() => {
+    try {
+      renderCharts();
+    } catch (e) {
+      console.warn('Charts error:', e);
+    }
+  }, 100);
+});
+
+document.getElementById('exportCSV').addEventListener('click', () => {
+  let csv = 'Exercice,Semaine,Poids,Reps,Date\n';
+  Object.entries(state.hist).forEach(([exName, records]) => {
+    records.forEach(record => {
+      const date = new Date(record.ts).toLocaleDateString();
+      csv += `"${exName}",${record.week},${record.weight},${record.reps},${date}\n`;
+    });
+  });
+  
+  const blob = new Blob([csv], { type: 'text/csv' });
+  const url = window.URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = `planetarium_data_s${state.week}.csv`;
+  a.click();
+  window.URL.revokeObjectURL(url);
+  
+  showQuick('CSV exporté ✓', '#10b981');
+});
+
+document.getElementById('resetApp').addEventListener('click', () => {
+  if (confirm('Reset complet ? Toutes les données seront perdues.')) {
+    localStorage.removeItem(STATE_KEY);
+    state = defaultState();
+    saveState();
+    renderAll();
+    showQuick('App resetée', '#ffb347');
+  }
+});
+
+document.getElementById('skipTimer').addEventListener('click', () => stopRest());
+
+// Week navigation
+document.getElementById('prevWeek').addEventListener('click', () => {
+  if (state.week > 1) {
+    state.week--;
+    saveState();
+    renderAll();
+    showQuick(`Semaine ${state.week}`, '#ffb347');
+  }
+});
+
+document.getElementById('nextWeek').addEventListener('click', () => {
+  state.week++;
+  saveState();
+  renderAll();
+  showQuick(`Semaine ${state.week}`, '#ffb347');
+});
 
 // ========== INIT ==========
 renderAll();
